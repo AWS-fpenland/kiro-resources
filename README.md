@@ -6,7 +6,7 @@ A template repository of reusable [Kiro](https://kiro.dev) resources — hooks, 
 
 | Category | Path | Description |
 |----------|------|-------------|
-| Hooks | `.kiro/hooks/` | Agent hooks that fire on IDE events (session start, file save, etc.) |
+| Hooks | `/hooks/` | Agent hooks that fire on IDE events (session start, file save, etc.) |
 
 > More categories (agents, steering, skills) coming soon.
 
