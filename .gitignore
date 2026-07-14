@@ -1,0 +1,11 @@
+# Hook state tracking files
+.kiro/hooks/.state/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+*.swp
+*.swo
+*~
