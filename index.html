@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiro Turns 1! 🎂</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0a0a0a; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: monospace; }
+        canvas { image-rendering: pixelated; image-rendering: crisp-edges; border: 3px solid #333; }
+        #dialog-box {
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background: #1a1a2e; border: 3px solid #e94560; border-radius: 8px;
+            padding: 16px 24px; color: #eee; font-size: 14px; max-width: 600px;
+            width: 90%; display: none; z-index: 100; line-height: 1.6;
+            box-shadow: 0 0 20px rgba(233, 69, 96, 0.3);
+        }
+        #dialog-box .speaker { color: #e94560; font-weight: bold; margin-bottom: 4px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        #dialog-box .hint { color: #666; font-size: 11px; margin-top: 8px; }
+        #controls {
+            position: fixed; top: 10px; left: 10px; color: #555; font-size: 11px; z-index: 100;
+        }
+        #title-card {
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            text-align: center; color: #fff; z-index: 200; animation: fadeOut 3s 2s forwards;
+        }
+        #title-card h1 { font-size: 32px; color: #e94560; margin-bottom: 8px; text-shadow: 0 0 10px #e94560; }
+        #title-card p { font-size: 14px; color: #888; }
+        @keyframes fadeOut { to { opacity: 0; pointer-events: none; } }
+    </style>
+</head>
+<body>
+    <div id="title-card">
+        <h1>🎂 KIRO TURNS 1 🎂</h1>
+        <p>Arrow keys to move · E to interact</p>
+    </div>
+    <div id="controls">WASD/Arrows: Move | E: Interact</div>
+    <canvas id="game"></canvas>
+    <div id="dialog-box">
+        <div class="speaker"></div>
+        <div class="text"></div>
+        <div class="hint">Press E to continue</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
